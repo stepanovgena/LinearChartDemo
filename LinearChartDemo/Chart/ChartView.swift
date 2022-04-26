@@ -48,7 +48,6 @@ extension ChartView: ChartViewDelegate {
             chartDatasetVMs: viewModel.chartDataSetVMs
         )
         infoBubble.viewModel = infoBubbleVmFactory.makeInfoBubbleVM()
-        print("Did select point x: \(highlight.x), y:\(highlight.y), xPx:\(highlight.xPx), yPx:\(highlight.yPx)")
 
         let markerPosition = CGPoint(x: highlight.xPx, y: highlight.yPx)
         let offsetProvider = InfoBubbleOffsetProvider()
