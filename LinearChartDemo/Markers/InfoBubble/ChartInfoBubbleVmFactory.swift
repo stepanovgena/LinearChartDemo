@@ -8,7 +8,7 @@
 import Foundation
 import Charts
 
-/// Фабрика вьюмоделей баблика с инфо о точке на графике
+/// Info bubble VM factory
 struct ChartInfoBubbleVmFactory {
     private let entry: ChartDataEntry
     private let chartDatasetVMs: [ChartDataSetVM]

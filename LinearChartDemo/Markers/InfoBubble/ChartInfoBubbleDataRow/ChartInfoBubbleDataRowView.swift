@@ -7,13 +7,13 @@
 
 import UIKit
 
-/// Константы, используемые в файле
+/// Constants
 private enum Constants {
     static var legendSize: CGFloat { 12 }
     static var legendOffset: CGFloat { 12 }
 }
 
-/// Цветной индикатор с подписью
+/// Data row view
 final class ChartInfoBubbleDataRowView: UIView {
     private let label = UILabel()
     private let legend = UIImageView()

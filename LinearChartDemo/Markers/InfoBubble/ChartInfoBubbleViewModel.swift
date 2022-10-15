@@ -7,13 +7,13 @@
 
 import Foundation
 
-/// Протокол вью-модели информационного маркера графика
+/// Info bubble VM protocol
 protocol ChartInfoBubbleViewModelProtocol {
     var title: String { get set }
     var dataSet: [ChartInfoBubbleDataRowViewModelProtocol] { get set }
 }
 
-/// Вью-модель информационного маркера графика
+/// Info bubble VM
 final class ChartInfoBubbleViewModel: ChartInfoBubbleViewModelProtocol {
     var title: String
     var dataSet: [ChartInfoBubbleDataRowViewModelProtocol]

@@ -8,7 +8,7 @@
 import UIKit
 import Charts
 
-/// Круговой маркер для отображения выбранной точки на графике
+/// Marker for highlighting selected value on graph
 final class CircleMarker: MarkerView {
     override func draw(context: CGContext, point: CGPoint) {
         super.draw(context: context, point: point)

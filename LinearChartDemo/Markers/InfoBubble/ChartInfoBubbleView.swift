@@ -8,16 +8,14 @@
 import UIKit
 import SnapKit
 
-/// Константы, используемые в файле
+/// Constants
 private enum Constants {
     static var cornerRadius: CGFloat { 12 }
     static var verticalSpacing: CGFloat { 8 }
     static var horizontalSpacing: CGFloat { 12 }
 }
 
-/// Баблик с информационным маркером для точки графика
-/// [Тесты](x-source-tag://.ChartInfoBubbleViewTests)
-/// - Tag: .ChartInfoBubbleView
+/// Info bubble for selected point
 final class ChartInfoBubbleView: UIView {
     private let title = UILabel()
     private let stackView = UIStackView()

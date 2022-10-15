@@ -8,7 +8,7 @@
 import Foundation
 import Charts
 
-/// Вьюмодель данных для одного графика
+/// Single chart data model
 struct ChartDataSetVM {
     public let colorAsset: DataColor
     public let chartDataEntries: [ChartDataEntry]

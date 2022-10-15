@@ -7,12 +7,12 @@
 
 import Foundation
 
-/// Константы, используемые в файле
+/// Constants
 private enum Constants {
     static var rubSymbol: String { " ₽" }
 }
 
-/// Преобразует данные точки из оригинального набора в данные для представления в баблике маркера
+/// Converts original dataset to info bubble representation
 struct ChartInfoBubbleDataRowConverter {
     func convert(dataSetVMs: [ChartDataSetVM], position: Int) -> [ChartInfoBubbleDataRowViewModel] {
         return dataSetVMs.map {

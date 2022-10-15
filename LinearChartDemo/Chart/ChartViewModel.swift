@@ -7,12 +7,12 @@
 
 import Foundation
 
-/// Протокол вьюмодели графика
+/// View model protocol
 protocol ChartViewModelProtocol {
     var chartDataSetVMs: [ChartDataSetVM] { get set }
 }
 
-/// Вьюмодель графика
+/// View model
 final class ChartViewModel: ChartViewModelProtocol {
     public var chartDataSetVMs: [ChartDataSetVM]
 

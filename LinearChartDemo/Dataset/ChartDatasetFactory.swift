@@ -8,7 +8,7 @@
 import UIKit
 import Charts
 
-/// Фабрика подготовки датасета для графика
+/// Factory preparing dataset for a single chart
 struct ChartDatasetFactory {
     func makeChartDataset(
         colorAsset: DataColor,
@@ -16,18 +16,18 @@ struct ChartDatasetFactory {
     ) -> LineChartDataSet {
         var dataSet = LineChartDataSet(entries: entries, label: nil)
 
-        // общие настройки графика
+        // chart main settings
         dataSet.setColor(colorAsset.color)
         dataSet.lineWidth = 3
-        dataSet.mode = .cubicBezier // сглаживание
-        dataSet.drawValuesEnabled = false // убираем значения на графике
-        dataSet.drawCirclesEnabled = false // убираем точки на графике
-        dataSet.drawFilledEnabled = true // нужно для градиента
+        dataSet.mode = .cubicBezier // curve smoothing
+        dataSet.drawValuesEnabled = false // disble values
+        dataSet.drawCirclesEnabled = false // disable circles
+        dataSet.drawFilledEnabled = true // gradient setting
 
-        // оформление, связанное с выбором значения на графике
-        dataSet.drawHorizontalHighlightIndicatorEnabled = false // оставляем только вертикальную линию
-        dataSet.highlightLineWidth = 2 // толщина вертикальной линии
-        dataSet.highlightColor = colorAsset.color // цвет вертикальной линии
+        // settings for picking values on graph
+        dataSet.drawHorizontalHighlightIndicatorEnabled = false // leave only vertical line
+        dataSet.highlightLineWidth = 2 // vertical line width
+        dataSet.highlightColor = colorAsset.color // vertical line color
 
         addGradient(to: &dataSet, colorAsset: colorAsset)
 

@@ -7,13 +7,13 @@
 
 import UIKit
 
-/// Оффсет между центрами баблика и чарта
+/// Offset between info bubble and chart
 struct InfoBubbleOffset {
     let x: CGFloat
     let y: CGFloat
 }
 
-/// Рассчитывает оптимальный оффсет между центрами вьюшек
+/// Caluclates optimal offset for info bubble
 struct InfoBubbleOffsetProvider {
     func getFittingOffset(
         forChild view: UIView,

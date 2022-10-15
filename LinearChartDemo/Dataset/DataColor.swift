@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Абстракция над цветами UIColor
+/// Abstraction above UIColor
 enum DataColor {
     case first
     case second

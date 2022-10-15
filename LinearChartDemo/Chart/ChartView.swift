@@ -9,13 +9,13 @@ import UIKit
 import SnapKit
 import Charts
 
-/// Константы, используемые в файле
+/// Constants
 private enum Constants {
     static var chartBottomInset: CGFloat { 40 }
     static var infoBubbleMargin: CGFloat { 12 }
 }
 
-/// Вьюшка графика
+/// Chart view
 final class ChartView: UIView {
     private let chart = LineChartView()
     private let circleMarker = CircleMarker()
@@ -42,7 +42,7 @@ final class ChartView: UIView {
 extension ChartView: ChartViewDelegate {
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         guard let viewModel = viewModel else { return }
-        // Показываем инфо баблик в нужном месте
+        // Place info bubble in correct location
         let infoBubbleVmFactory = ChartInfoBubbleVmFactory(
             entry: entry,
             chartDatasetVMs: viewModel.chartDataSetVMs
@@ -86,30 +86,30 @@ private extension ChartView {
         }
         chart.isUserInteractionEnabled = true
 
-        // отключаем координатную сетку
+        // disable coordinate grid
         chart.xAxis.drawGridLinesEnabled = false
         chart.leftAxis.drawGridLinesEnabled = false
         chart.rightAxis.drawGridLinesEnabled = false
         chart.drawGridBackgroundEnabled = false
-        // отключаем подписи к осям
+        // disable labels
         chart.xAxis.drawLabelsEnabled = false
         chart.leftAxis.drawLabelsEnabled = false
         chart.rightAxis.drawLabelsEnabled = false
-        // отключаем легенду
+        // disable legend
         chart.legend.enabled = false
-        // отключаем зум
+        // disable zoom
         chart.pinchZoomEnabled = false
         chart.doubleTapToZoomEnabled = false
-        // убираем артефакты вокруг области графика
+        // remove artifacts around chart area
         chart.xAxis.enabled = false
         chart.leftAxis.enabled = false
         chart.rightAxis.enabled = false
         chart.drawBordersEnabled = false
         chart.minOffset = 0
-        // устанавливаем делегата, нужно для обработки нажатий
+        // delegate for touch handling
         chart.delegate = self
 
-        // маркеры
+        // markers
         chart.drawMarkers = true
         circleMarker.chartView = chart
         chart.marker = circleMarker

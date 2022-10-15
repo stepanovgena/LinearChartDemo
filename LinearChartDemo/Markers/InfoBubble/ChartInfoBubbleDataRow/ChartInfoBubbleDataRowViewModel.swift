@@ -7,13 +7,13 @@
 
 import Foundation
 
-/// Протокол вьюмодели строки в информационном маркере графика
+/// Data row VM protocol
 protocol ChartInfoBubbleDataRowViewModelProtocol {
     var colorAsset: DataColor { get set }
     var value: String { get set }
 }
 
-/// Вьюмодель строки в информационном маркере графика
+/// Data row VM
 final class ChartInfoBubbleDataRowViewModel: ChartInfoBubbleDataRowViewModelProtocol {
     var colorAsset: DataColor
     var value: String

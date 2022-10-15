@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Charts
 
-/// Константы, используемые в файле
+/// Constants
 private enum Constants {
     static var horizontalInset: CGFloat { 24 }
     static var chartHeight: CGFloat { 300 }
@@ -37,7 +37,7 @@ private extension ViewController {
             colorAsset: .first,
             chartDataEntries: makeRandomChartDataset()
         )
-        // раскомментируйте ниже, чтобы попробовать двойной график
+        // uncomment below to try multiple charts in one area
 //        let chartDataSetTwo = ChartDataSetVM(
 //            colorAsset: .second,
 //            chartDataEntries: makeRandomChartDataset()
@@ -45,14 +45,14 @@ private extension ViewController {
         let chartVM = ChartViewModel(
             chartDataSetVMs: [
                 chartDataSetOne,
-                // раскомментируйте ниже, чтобы попробовать двойной график
+                // uncomment below to try multiple charts in one area
 //                chartDataSetTwo,
             ]
         )
         chartView.viewModel = chartVM
     }
 
-    ///  Готовит случайный набор данных для отображения
+    ///  Random dataset
     func makeRandomChartDataset() -> [ChartDataEntry] {
         var numbers = [Double]()
         for number in 1...10 {
@@ -66,7 +66,7 @@ private extension ViewController {
                 let entry = ChartDataEntry(
                     x: Double(position),
                     y: randomValue,
-                    data: "\(position) января 2022")
+                    data: "\(position) Jan 2022")
                 entries.append(entry)
             }
         }
