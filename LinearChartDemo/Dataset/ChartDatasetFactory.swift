@@ -14,7 +14,7 @@ struct ChartDatasetFactory {
         colorAsset: DataColor,
         entries: [ChartDataEntry]
     ) -> LineChartDataSet {
-        var dataSet = LineChartDataSet(entries: entries, label: nil)
+        var dataSet = LineChartDataSet(entries: entries, label: "")
 
         // chart main settings
         dataSet.setColor(colorAsset.color)
@@ -53,7 +53,7 @@ private extension ChartDatasetFactory {
             colors: colors,
             locations: locations
         ) {
-            dataSet.fill = .fillWithLinearGradient(gradient, angle: 270)
+            dataSet.fill = LinearGradientFill(gradient: gradient, angle: 270)
         }
     }
 }

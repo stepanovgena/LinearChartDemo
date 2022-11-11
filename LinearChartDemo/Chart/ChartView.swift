@@ -40,7 +40,11 @@ final class ChartView: UIView {
 
 // MARK: - ChartViewDelegate
 extension ChartView: ChartViewDelegate {
-    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+    func chartValueSelected(
+        _ chartView: ChartViewBase,
+        entry: ChartDataEntry,
+        highlight: Highlight
+    ) {
         guard let viewModel = viewModel else { return }
         // Place info bubble in correct location
         let infoBubbleVmFactory = ChartInfoBubbleVmFactory(
@@ -125,15 +129,14 @@ private extension ChartView {
 
     func updateChartDatasets() {
         guard let viewModel = viewModel else { return }
-        let chartData = LineChartData()
         let dataSetFactory = ChartDatasetFactory()
-        viewModel.chartDataSetVMs.forEach {
-            let dataSet = dataSetFactory.makeChartDataset(
+        let datasets = viewModel.chartDataSetVMs.map {
+            dataSetFactory.makeChartDataset(
                 colorAsset: $0.colorAsset,
                 entries: $0.chartDataEntries
             )
-            chartData.addDataSet(dataSet)
         }
+        let chartData = LineChartData(dataSets: datasets)
         chart.data = chartData
     }
 }

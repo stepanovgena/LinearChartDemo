@@ -208,7 +208,7 @@
 			mainGroup = 82FB1423280495EE00EB19D9;
 			packageReferences = (
 				82FB14432804965100EB19D9 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				82E0A3392816A82E001965E4 /* XCRemoteSwiftPackageReference "charts" */,
+				82E0A3392816A82E001965E4 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 82FB142D280495EE00EB19D9 /* Products */;
 			projectDirPath = "";
@@ -474,12 +474,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		82E0A3392816A82E001965E4 /* XCRemoteSwiftPackageReference "charts" */ = {
+		82E0A3392816A82E001965E4 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 		82FB14432804965100EB19D9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -495,7 +495,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		82E0A33A2816A82E001965E4 /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 82E0A3392816A82E001965E4 /* XCRemoteSwiftPackageReference "charts" */;
+			package = 82E0A3392816A82E001965E4 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
 		};
 		82FB14442804965100EB19D9 /* SnapKit */ = {

@@ -9,7 +9,7 @@ import Foundation
 
 /// Constants
 private enum Constants {
-    static var rubSymbol: String { " ₽" }
+    static var currencySymbol: String { " $" }
 }
 
 /// Converts original dataset to info bubble representation
@@ -19,7 +19,7 @@ struct ChartInfoBubbleDataRowConverter {
             let color = $0.colorAsset
             guard position <= $0.chartDataEntries.count else { return .init(colorAsset: color, value: "") }
             let dataEntry = $0.chartDataEntries[position - 1].y
-            let formattedValue = String(dataEntry) + Constants.rubSymbol
+            let formattedValue = String(dataEntry) + Constants.currencySymbol
             return ChartInfoBubbleDataRowViewModel(colorAsset: color, value: formattedValue)
         }
     }
